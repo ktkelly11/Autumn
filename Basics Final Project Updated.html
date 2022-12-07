@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autumn/Fall</title>
+    <style>
+      html {
+        background: linear-gradient(
+          108.5deg,
+          rgb(30, 59, 94) 4%,
+          rgb(253, 29, 62) 49.3%,
+          rgb(255, 224, 94) 96%
+        );
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 72px;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: 100;
+        padding: 0%;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 15px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0px;
+      }
+
+      .learn-more {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(150, 7, 7);
+        color: white;
+        font-size: 20px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Autumn</h1>
+      <h2>The very <strong>best</strong> season!</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/546/original/autumn-in-the-white-mountains-of-new-hampshire-royalty-free-image-841380450-1531931081.jpg?1663603685"
+        alt="Autumn Leaves Changing"
+      />
+      <p>
+        <span class="season">Autumn</span>, also known as <em>Fall</em> in the
+        United States, is one of four seasons.
+        <span class="season">Autumn</span> marks the transition from summer to
+        winter, starting in September and ending in December.
+        <span class="season">Autumn</span> is the season when the duration of
+        daylight becomes noticeably shorter and the temperature cools
+        considerably. In the USA the leaves change to reds, oranges, and yellows
+        and fall off of trees. Pumpkins and apples are harvested. It is marked
+        by two holidays in the USA, Halloween, when children go
+        trick-or-treating, and Thanksgiving, when families gather to eat a meal
+        and talk about what they are most thankful for.
+        <br />
+        <a
+          href="https://www.britannica.com/science/autumn-season"
+          target="_blank"
+          class="learn-more"
+        >
+          Learn more here
+        </a>
+      </p>
+      <p>
+        Find Fall Foliage
+        <br />
+        <button class="find-foliage">Here</button>
+      </p>
+      <hr />
+      <p class="footer">This page was coded by Katie Kelly</p>
+    </div>
+    <script>
+      function find() {
+        let fall = prompt("Would you like to find fall foliage near you?");
+
+        if (fall === "yes") {
+          let name = prompt("What is your name?");
+          let email = prompt("What is your email?");
+          let city = prompt("Where are you from?");
+          alert(
+            "Thank you, " +
+              name +
+              "! We will be in touch by email with the best fall foliage you can find in " +
+              city +
+              "! :fallen_leaf:"
+          );
+        } else {
+          alert("Hope you have a lovely Autumn!");
+        }
+      }
+      let findFoliage = document.querySelector("button");
+      findFoliage.addEventListener("click", find);
+    </script>
+  </body>
+</html>
